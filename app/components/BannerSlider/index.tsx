@@ -1,11 +1,21 @@
-import AwesomeSlider from "react-awesome-slider";
+import { Carousel } from "react-responsive-carousel";
 
 export default function BannerSlider() {
   return (
-    <AwesomeSlider className="h-[calc(100vh-115.5px)]">
-      <div className="w-full h-full relative bg-[url('/images/banner-1.webp')] bg-no-repeat bg-cover">
-        <div className="text-center text-white lg:w-[50%] m-auto pt-[15rem] lg:pt-[12rem] px-[1.5rem]">
-          <h2 className="text-[2.5rem] leading-[1.2] lg:text-[3.5rem]">
+    <Carousel
+      autoPlay
+      showThumbs={false}
+      showIndicators={false}
+      showStatus={false}
+      className="h-[calc(100vh-115.5px)]"
+    >
+      <div>
+        <img
+          alt="LET US BRING OUT YOUR NATURAL BEAUTY"
+          src="/images/banner-1.webp"
+        />
+        <div className="legend text-center text-white lg:w-[50%] m-auto pt-[15rem] lg:pt-[12rem] px-[1.5rem]">
+          <h2 className="text-[2rem] lg:text-[3.5rem]">
             LET US BRING OUT YOUR NATURAL BEAUTY
           </h2>
           <p className="mt-[1rem]">
@@ -19,9 +29,13 @@ export default function BannerSlider() {
           </a>
         </div>
       </div>
-      <div className="w-full h-full relative bg-[url('/images/banner-2.webp')] bg-no-repeat bg-cover">
-        <div className="text-center text-white lg:w-[50%] m-auto pt-[15rem] lg:pt-[12rem] px-[1.5rem]">
-          <h2 className="text-[2.5rem] leading-[1.2] lg:text-[3.5rem]">
+      <div>
+        <img
+          alt=" EVERYTHING IS POSSIBLE WITH OUR SALON!"
+          src="/images/banner-2.webp"
+        />
+        <div className="legend text-center text-white lg:w-[50%] m-auto pt-[15rem] lg:pt-[12rem] px-[1.5rem]">
+          <h2 className="text-[2rem] lg:text-[3.5rem]">
             EVERYTHING IS POSSIBLE WITH OUR SALON!
           </h2>
           <p className="mt-[1rem]">
@@ -35,9 +49,10 @@ export default function BannerSlider() {
           </a>
         </div>
       </div>
-      <div className="w-full h-full relative bg-[url('/images/banner-3.webp')] bg-no-repeat bg-cover">
-        <div className="text-center text-white lg:w-[50%] m-auto pt-[15rem] lg:pt-[12rem] px-[1.5rem]">
-          <h2 className="text-[2.5rem] leading-[1.2] lg:text-[3.5rem]">
+      <div>
+        <img alt="7 TIMES VISIT TO GET 10% OFF" src="/images/banner-3.webp" />
+        <div className="legend text-center text-white lg:w-[50%] m-auto pt-[15rem] lg:pt-[12rem] px-[1.5rem]">
+          <h2 className="text-[2rem] lg:text-[3.5rem]">
             7 TIMES VISIT TO GET 10% OFF
           </h2>
           <a
@@ -48,6 +63,6 @@ export default function BannerSlider() {
           </a>
         </div>
       </div>
-    </AwesomeSlider>
+    </Carousel>
   );
 }

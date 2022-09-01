@@ -8,9 +8,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./styles/main.css";
-import slickStylesUrl from "react-awesome-slider/dist/styles.css";
-import slickThemeStylesUrl from "react-awesome-slider/dist/custom-animations/cube-animation.css";
-
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "LUX Nails",
@@ -18,11 +15,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 export function links() {
-  return [
-    { rel: "stylesheet", href: styles },
-    { rel: "stylesheet", href: slickStylesUrl },
-    { rel: "stylesheet", href: slickThemeStylesUrl },
-  ];
+  return [{ rel: "stylesheet", href: styles }];
 }
 export default function App() {
   return (
